@@ -65,7 +65,7 @@ public class Runigram {
 	// we can apply the function and then use this function to print the resulting image.
 	private static void print(Color[][] image) {
 		for (int i = 0; i < image.length; i++) {
-			for (int j = 0; j < image[0].length; j++) {
+			for (int j = 0; j < image[i].length; j++) {
 			System.out.printf("%3s",image[i][j]) ;
 			}
 		}
@@ -138,6 +138,7 @@ public class Runigram {
 				int r = image[h][w].getRed();
 				int g = image[h][w].getGreen();
 				int b = image[h][w].getBlue();
+				scaleImage[i][j] = new Color(r, g, b);
 			}
 		}
 		return scaleImage;
