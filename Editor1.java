@@ -5,7 +5,7 @@ import java.awt.Color;
  * The program recieves two command-line arguments: a string representing the name of the PPM file
  * of a source image, and one of the strings "fh", "fv", or "gs". The program creates and displays
  * a new image which is either the horizontally flipped version of the source image ("fh"),
- * or the vertically flipped version of the source image ("fv"), or the grayscaled version of the
+ * or the vertically aflipped version of the source image ("fv"), or the grayscaled version of the
  * source image ("gs"). For example, to create a grayscale version of thor.ppm, use:
  * java Editor1 thor.ppm gs
  */
@@ -16,7 +16,7 @@ public class Editor1 {
 		String action = args[1];
 		// Reads the input image and creates an empty output image
 		Color[][] imageIn = Runigram.read(fileName);	
-		Color[][] imageOut = null;	
+		Color[][] imageOut = new Color[imageIn.length][imageIn[0].length];	
 		// Applies the specified image processing function										
 		if (action.equals("fh")) {
 			imageOut = Runigram.flippedHorizontally(imageIn);
